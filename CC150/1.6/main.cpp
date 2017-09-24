@@ -4,6 +4,9 @@
 using namespace std;
 
 string compressStr (string str) {
+    if (str.length() == 0) {
+        return str;
+    }
     int count = 0;
     int length = str.length();
     int i = 1, j = 0;
@@ -30,7 +33,7 @@ string compressStr (string str) {
 }
 
 int main() {
-    string str = "aabcccccaaa";
+    string str = "";
     string out = compressStr(str);
     cout << out << endl;
     return 0;
